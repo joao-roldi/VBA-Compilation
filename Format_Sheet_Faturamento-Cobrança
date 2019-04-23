@@ -19,7 +19,9 @@ Sub Format_Stands()
                 .TintAndShade = 0
                 .ThemeFont = xlThemeFontMinor
             End With
+            
             Selection.RowHeight = 14.25
+            
             With Selection
                 .VerticalAlignment = xlCenter
                 .Orientation = 0
@@ -28,6 +30,7 @@ Sub Format_Stands()
                 .ShrinkToFit = False
                 .ReadingOrder = xlContext
             End With
+            
             Range("B1").Select
             ActiveCell.FormulaR1C1 = "Loja"
             Range("B2").Select
@@ -42,12 +45,14 @@ Sub Format_Stands()
             ActiveCell.FormulaR1C1 = "Data de Vencimento"
             Range("B14").Select
             ActiveCell.FormulaR1C1 = "Descontos"
-            Range("B15").Select
+            
+            Range("B15").Select            
             With Selection.Interior
                 .Pattern = xlNone
                 .TintAndShade = 0
                 .PatternTintAndShade = 0
             End With
+            
             Range("I1:J4").Select
             Selection.ClearContents
             With Selection
@@ -62,6 +67,7 @@ Sub Format_Stands()
                 .MergeCells = False
             End With
             Selection.UnMerge
+            
             Range("F1:G4").Select
             Selection.Cut
             Range("L5").Select
@@ -76,6 +82,7 @@ Sub Format_Stands()
             ActiveCell.FormulaR1C1 = "BTBR"
             Range("O6").Select
             ActiveCell.FormulaR1C1 = "DIFERENÇA"
+            
             Range("L5:O5").Select
             With Selection
                 .HorizontalAlignment = xlGeneral
@@ -100,6 +107,7 @@ Sub Format_Stands()
                 .MergeCells = False
             End With
             Selection.Merge
+            
             Range("M6:O6").Select
             Selection.Font.Bold = True
             With Selection
@@ -112,7 +120,7 @@ Sub Format_Stands()
                 .ShrinkToFit = False
                 .ReadingOrder = xlContext
                 .MergeCells = False
-            End With
+            End With            
             Selection.Borders(xlDiagonalDown).LineStyle = xlNone
             Selection.Borders(xlDiagonalUp).LineStyle = xlNone
             Selection.Borders(xlEdgeLeft).LineStyle = xlNone
