@@ -4,252 +4,303 @@ Sub Format_Stands()
 '
 
 '
-    Cells.Select
-    With Selection.Font
-        .Name = "Calibri"
-        .Strikethrough = False
-        .Superscript = False
-        .Subscript = False
-        .OutlineFont = False
-        .Shadow = False
-        .Underline = xlUnderlineStyleNone
-        .TintAndShade = 0
-        .ThemeFont = xlThemeFontMinor
-    End With
-    Selection.RowHeight = 14.25
-    With Selection
-        .VerticalAlignment = xlCenter
-        .Orientation = 0
-        .AddIndent = False
-        .IndentLevel = 0
-        .ShrinkToFit = False
-        .ReadingOrder = xlContext
-    End With
-    Range("B1").Select
-    ActiveCell.FormulaR1C1 = "Loja"
-    Range("B2").Select
-    ActiveCell.FormulaR1C1 = "Contratante"
-    Range("B3").Select
-    ActiveCell.FormulaR1C1 = "Contrato"
-    Range("B4").Select
-    ActiveCell.FormulaR1C1 = "Prazo da obra"
-    Range("B7").Select
-    ActiveCell.FormulaR1C1 = "Percentual"
-    Range("B12").Select
-    ActiveCell.FormulaR1C1 = "Data de Vencimento"
-    Range("B14").Select
-    ActiveCell.FormulaR1C1 = "Descontos"
-    Range("B15").Select
-    With Selection.Interior
-        .Pattern = xlNone
-        .TintAndShade = 0
-        .PatternTintAndShade = 0
-    End With
-    Range("I1:J4").Select
-    Selection.ClearContents
-    With Selection
-        .HorizontalAlignment = xlGeneral
-        .VerticalAlignment = xlCenter
-        .WrapText = False
-        .Orientation = 0
-        .AddIndent = False
-        .IndentLevel = 0
-        .ShrinkToFit = False
-        .ReadingOrder = xlContext
-        .MergeCells = False
-    End With
-    Selection.UnMerge
-    Range("F1:G4").Select
-    Selection.Cut
-    Range("L5").Select
-    ActiveSheet.Paste
-    Range("L6:M8").Select
-    Selection.Cut
-    Range("L7").Select
-    ActiveSheet.Paste
-    Range("M6").Select
-    ActiveCell.FormulaR1C1 = "SV"
-    Range("N6").Select
-    ActiveCell.FormulaR1C1 = "BTBR"
-    Range("O6").Select
-    ActiveCell.FormulaR1C1 = "DIFERENÇA"
-    Range("L5:O5").Select
-    With Selection
-        .HorizontalAlignment = xlGeneral
-        .VerticalAlignment = xlCenter
-        .WrapText = False
-        .Orientation = 0
-        .AddIndent = False
-        .IndentLevel = 0
-        .ShrinkToFit = False
-        .ReadingOrder = xlContext
-        .MergeCells = False
-    End With
-    Selection.UnMerge
-    With Selection
-        .HorizontalAlignment = xlCenter
-        .VerticalAlignment = xlCenter
-        .Orientation = 0
-        .AddIndent = False
-        .IndentLevel = 0
-        .ShrinkToFit = False
-        .ReadingOrder = xlContext
-        .MergeCells = False
-    End With
-    Selection.Merge
-    Range("M6:O6").Select
-    Selection.Font.Bold = True
-    With Selection
-        .HorizontalAlignment = xlRight
-        .VerticalAlignment = xlCenter
-        .WrapText = False
-        .Orientation = 0
-        .AddIndent = False
-        .IndentLevel = 0
-        .ShrinkToFit = False
-        .ReadingOrder = xlContext
-        .MergeCells = False
-    End With
-    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
-    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
-    Selection.Borders(xlEdgeLeft).LineStyle = xlNone
-    With Selection.Borders(xlEdgeTop)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlThin
-    End With
-    With Selection.Borders(xlEdgeBottom)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
-    Selection.Borders(xlEdgeRight).LineStyle = xlNone
-    Selection.Borders(xlInsideVertical).LineStyle = xlNone
-    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
-    Range("L5:O5").Select
-    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
-    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
-    Selection.Borders(xlEdgeLeft).LineStyle = xlNone
-    With Selection.Borders(xlEdgeTop)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlThin
-    End With
-    With Selection.Borders(xlEdgeBottom)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
-    Selection.Borders(xlEdgeRight).LineStyle = xlNone
-    Selection.Borders(xlInsideVertical).LineStyle = xlNone
-    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
-    Range("O7").Select
-    ActiveCell.FormulaR1C1 = "=ROUND(RC[-2]-RC[-1],2)"
-    Range("O9").Select
-    ActiveCell.FormulaR1C1 = "=ROUND(RC[-2]-RC[-1],2)"
-    Range("M7:O7").Select
-    With Selection.Interior
-        .PatternColorIndex = xlAutomatic
-        .ThemeColor = xlThemeColorDark1
-        .TintAndShade = -0.149998474074526
-        .PatternTintAndShade = 0
-    End With
-    Range("M9:O9").Select
-    With Selection.Interior
-        .PatternColorIndex = xlAutomatic
-        .ThemeColor = xlThemeColorDark1
-        .TintAndShade = -0.149998474074526
-        .PatternTintAndShade = 0
-    End With
-    Range("M9").Select
-    Selection.ClearContents
-    Range("M7").Select
-    Selection.ClearContents
-    Range("C23").Select
-    Application.CutCopyMode = False
-    ActiveCell.FormulaR1C1 = "=R9C14"
-    Range("C23").Select
-    Selection.Copy
-    Range("D23:H23").Select
-    ActiveSheet.Paste
+    Let x = 0
+    Do While x < 17
     
-    Columns("C:O").ColumnWidth = 14
-    Columns("J").ColumnWidth = 8
-    Columns("B").ColumnWidth = 30
-    Columns("A").ColumnWidth = 3
+            Cells.Select
+            With Selection.Font
+                .Name = "Calibri"
+                .Strikethrough = False
+                .Superscript = False
+                .Subscript = False
+                .OutlineFont = False
+                .Shadow = False
+                .Underline = xlUnderlineStyleNone
+                .TintAndShade = 0
+                .ThemeFont = xlThemeFontMinor
+            End With
+            Selection.RowHeight = 14.25
+            With Selection
+                .VerticalAlignment = xlCenter
+                .Orientation = 0
+                .AddIndent = False
+                .IndentLevel = 0
+                .ShrinkToFit = False
+                .ReadingOrder = xlContext
+            End With
+            Range("B1").Select
+            ActiveCell.FormulaR1C1 = "Loja"
+            Range("B2").Select
+            ActiveCell.FormulaR1C1 = "Contratante"
+            Range("B3").Select
+            ActiveCell.FormulaR1C1 = "Contrato"
+            Range("B4").Select
+            ActiveCell.FormulaR1C1 = "Prazo da obra"
+            Range("B7").Select
+            ActiveCell.FormulaR1C1 = "Percentual"
+            Range("B12").Select
+            ActiveCell.FormulaR1C1 = "Data de Vencimento"
+            Range("B14").Select
+            ActiveCell.FormulaR1C1 = "Descontos"
+            Range("B15").Select
+            With Selection.Interior
+                .Pattern = xlNone
+                .TintAndShade = 0
+                .PatternTintAndShade = 0
+            End With
+            Range("I1:J4").Select
+            Selection.ClearContents
+            With Selection
+                .HorizontalAlignment = xlGeneral
+                .VerticalAlignment = xlCenter
+                .WrapText = False
+                .Orientation = 0
+                .AddIndent = False
+                .IndentLevel = 0
+                .ShrinkToFit = False
+                .ReadingOrder = xlContext
+                .MergeCells = False
+            End With
+            Selection.UnMerge
+            Range("F1:G4").Select
+            Selection.Cut
+            Range("L5").Select
+            ActiveSheet.Paste
+            Range("L6:M8").Select
+            Selection.Cut
+            Range("L7").Select
+            ActiveSheet.Paste
+            Range("M6").Select
+            ActiveCell.FormulaR1C1 = "SV"
+            Range("N6").Select
+            ActiveCell.FormulaR1C1 = "BTBR"
+            Range("O6").Select
+            ActiveCell.FormulaR1C1 = "DIFERENÇA"
+            Range("L5:O5").Select
+            With Selection
+                .HorizontalAlignment = xlGeneral
+                .VerticalAlignment = xlCenter
+                .WrapText = False
+                .Orientation = 0
+                .AddIndent = False
+                .IndentLevel = 0
+                .ShrinkToFit = False
+                .ReadingOrder = xlContext
+                .MergeCells = False
+            End With
+            Selection.UnMerge
+            With Selection
+                .HorizontalAlignment = xlCenter
+                .VerticalAlignment = xlCenter
+                .Orientation = 0
+                .AddIndent = False
+                .IndentLevel = 0
+                .ShrinkToFit = False
+                .ReadingOrder = xlContext
+                .MergeCells = False
+            End With
+            Selection.Merge
+            Range("M6:O6").Select
+            Selection.Font.Bold = True
+            With Selection
+                .HorizontalAlignment = xlRight
+                .VerticalAlignment = xlCenter
+                .WrapText = False
+                .Orientation = 0
+                .AddIndent = False
+                .IndentLevel = 0
+                .ShrinkToFit = False
+                .ReadingOrder = xlContext
+                .MergeCells = False
+            End With
+            Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+            Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+            Selection.Borders(xlEdgeLeft).LineStyle = xlNone
+            With Selection.Borders(xlEdgeTop)
+                .LineStyle = xlContinuous
+                .ColorIndex = 0
+                .TintAndShade = 0
+                .Weight = xlThin
+            End With
+            With Selection.Borders(xlEdgeBottom)
+                .LineStyle = xlContinuous
+                .ColorIndex = 0
+                .TintAndShade = 0
+                .Weight = xlMedium
+            End With
+            Selection.Borders(xlEdgeRight).LineStyle = xlNone
+            Selection.Borders(xlInsideVertical).LineStyle = xlNone
+            Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
+            Range("L5:O5").Select
+            Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+            Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+            Selection.Borders(xlEdgeLeft).LineStyle = xlNone
+            With Selection.Borders(xlEdgeTop)
+                .LineStyle = xlContinuous
+                .ColorIndex = 0
+                .TintAndShade = 0
+                .Weight = xlThin
+            End With
+            With Selection.Borders(xlEdgeBottom)
+                .LineStyle = xlContinuous
+                .ColorIndex = 0
+                .TintAndShade = 0
+                .Weight = xlMedium
+            End With
+            Selection.Borders(xlEdgeRight).LineStyle = xlNone
+            Selection.Borders(xlInsideVertical).LineStyle = xlNone
+            Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
+            Range("O7").Select
+            ActiveCell.FormulaR1C1 = "=ROUND(RC[-2]-RC[-1],2)"
+            Range("O9").Select
+            ActiveCell.FormulaR1C1 = "=ROUND(RC[-2]-RC[-1],2)"
+            Range("M7:O7").Select
+            With Selection.Interior
+                .PatternColorIndex = xlAutomatic
+                .ThemeColor = xlThemeColorDark1
+                .TintAndShade = -0.149998474074526
+                .PatternTintAndShade = 0
+            End With
+            Range("M9:O9").Select
+            With Selection.Interior
+                .PatternColorIndex = xlAutomatic
+                .ThemeColor = xlThemeColorDark1
+                .TintAndShade = -0.149998474074526
+                .PatternTintAndShade = 0
+            End With
+            Range("M9").Select
+            Selection.ClearContents
+            Range("M7").Select
+            Selection.ClearContents
+            Range("C23").Select
+            Application.CutCopyMode = False
+            ActiveCell.FormulaR1C1 = "=R9C14"
+            Range("C23").Select
+            Selection.Copy
+            Range("D23:H23").Select
+            ActiveSheet.Paste
+
+            Columns("C:O").ColumnWidth = 14
+            Columns("J").ColumnWidth = 8
+            Columns("B").ColumnWidth = 30
+            Columns("A").ColumnWidth = 3
+
+            Range("B18:I18").Select
+            
+            With Selection.Interior
+                .Pattern = xlSolid
+                .PatternColorIndex = xlAutomatic
+                .Color = 5301960
+                .TintAndShade = 0
+                .PatternTintAndShade = 0
+            End With
+
+            Range("B27:I27").Select
+            
+            With Selection.Interior
+                .Pattern = xlSolid
+                .PatternColorIndex = xlAutomatic
+                .Color = 5301960
+                .TintAndShade = 0
+                .PatternTintAndShade = 0
+            End With
+
+            Range("B32:I32").Select
+            
+            With Selection.Interior
+                .Pattern = xlSolid
+                .PatternColorIndex = xlAutomatic
+                .Color = 5301960
+                .TintAndShade = 0
+                .PatternTintAndShade = 0
+            End With
+            
+            Range("B37:I37").Select
+            
+            With Selection.Interior
+                .Pattern = xlSolid
+                .PatternColorIndex = xlAutomatic
+                .Color = 5301960
+                .TintAndShade = 0
+                .PatternTintAndShade = 0
+            End With
+            
+            Range("J18:J40").Select
+            
+            With Selection.Font
+                .Name = "Wingdings 2"
+                .Strikethrough = False
+                .Superscript = False
+                .Subscript = False
+                .OutlineFont = False
+                .Shadow = False
+                .Underline = xlUnderlineStyleNone
+                .TintAndShade = 0
+                .ThemeFont = xlThemeFontNone
+            End With
+            
+            ActiveWindow.SmallScroll Down:=12
+            Range("A44:A47").Select
+            
+            With Selection.Font
+                .Name = "Wingdings 2"
+                .Size = 11
+                .Strikethrough = False
+                .Superscript = False
+                .Subscript = False
+                .OutlineFont = False
+                .Shadow = False
+                .Underline = xlUnderlineStyleNone
+                .Color = -16776961
+                .TintAndShade = 0
+                .ThemeFont = xlThemeFontNone
+            End With
+            
+            Range("B50").Select
+            Selection.ClearContents
+
+            Columns("K:K").Select
+            Selection.Delete Shift:=xlToLeft
+
+            Range("A1").Select
+            Range("K1:K3").Select
+            Selection.Delete Shift:=xlToLeft
+            Range("N1:N3").Select
+            Selection.Font.Bold = False
+
+            With Selection
+                .HorizontalAlignment = xlLeft
+                .VerticalAlignment = xlBottom
+                .WrapText = False
+                .Orientation = 0
+                .AddIndent = False
+                .IndentLevel = 0
+                .ShrinkToFit = False
+                .ReadingOrder = xlContext
+                .MergeCells = False
+            End With
+
+            With Selection
+                .HorizontalAlignment = xlCenter
+                .VerticalAlignment = xlBottom
+                .WrapText = False
+                .Orientation = 0
+                .AddIndent = False
+                .IndentLevel = 0
+                .ShrinkToFit = False
+                .ReadingOrder = xlContext
+                .MergeCells = False
+            End With
+
+            Range("B50").Select
+            Selection.ClearContents
+            Range("A1").Select
+
+            ActiveSheet.Next.Select
+
+            Range("A1").Select
     
-    Range("B18:I18").Select
-    With Selection.Interior
-        .Pattern = xlSolid
-        .PatternColorIndex = xlAutomatic
-        .Color = 5301960
-        .TintAndShade = 0
-        .PatternTintAndShade = 0
-    End With
-    ActiveWindow.SmallScroll Down:=9
-    Range("B27:I27").Select
-    With Selection.Interior
-        .Pattern = xlSolid
-        .PatternColorIndex = xlAutomatic
-        .Color = 5301960
-        .TintAndShade = 0
-        .PatternTintAndShade = 0
-    End With
-    ActiveWindow.SmallScroll Down:=6
-    Range("B32:I32").Select
-    With Selection.Interior
-        .Pattern = xlSolid
-        .PatternColorIndex = xlAutomatic
-        .Color = 5301960
-        .TintAndShade = 0
-        .PatternTintAndShade = 0
-    End With
-    ActiveWindow.SmallScroll Down:=9
-    Range("B37:I37").Select
-    With Selection.Interior
-        .Pattern = xlSolid
-        .PatternColorIndex = xlAutomatic
-        .Color = 5301960
-        .TintAndShade = 0
-        .PatternTintAndShade = 0
-    End With
-    ActiveWindow.SmallScroll Down:=-9
-    Range("J18:J40").Select
-    With Selection.Font
-        .Name = "Wingdings 2"
-        .Strikethrough = False
-        .Superscript = False
-        .Subscript = False
-        .OutlineFont = False
-        .Shadow = False
-        .Underline = xlUnderlineStyleNone
-        .TintAndShade = 0
-        .ThemeFont = xlThemeFontNone
-    End With
-    ActiveWindow.SmallScroll Down:=12
-    Range("A44:A47").Select
-    With Selection.Font
-        .Name = "Wingdings 2"
-        .Size = 11
-        .Strikethrough = False
-        .Superscript = False
-        .Subscript = False
-        .OutlineFont = False
-        .Shadow = False
-        .Underline = xlUnderlineStyleNone
-        .Color = -16776961
-        .TintAndShade = 0
-        .ThemeFont = xlThemeFontNone
-    End With
-    Range("B50").Select
-    Selection.ClearContents
-    
-    Columns("K:K").Select
-    Selection.Delete Shift:=xlToLeft
-    
-    Range("A1").Select
+      x = x + 1
+    Loop
+   
 End Sub
