@@ -1,0 +1,7 @@
+'''VBA
+-- Inserts a line after a selection
+
+    Range("A39:J39").Select
+        Selection.Insert Shift:=xlDown
+        
+'''
