@@ -18,7 +18,7 @@
 
 'Elseif function (allow multiples "ifs" inside a if function)
 
-  	If [condition 1 is true] Then
+    If [condition 1 is true] Then
       [do something]
     ElseIf [condition 2 is true] Then
       [do other thing]
