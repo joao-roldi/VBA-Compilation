@@ -1,0 +1,23 @@
+Sub CreateSummary()
+'This code can be used to create summary worksheet with hyperlinks
+'For some reason, this code does not work properly if the sheet names has a space
+Dim x As Worksheet
+Dim Counter As Integer
+Counter = 0
+For Each x In Worksheets
+Counter = Counter + 1
+If Counter = 1 Then GoTo Donothing
+    With ActiveCell
+        .Value = x.Name
+        .Hyperlinks.Add ActiveCell, "", x.Name & "!A1", TextToDisplay:=x.Name, ScreenTip:="Click here to go to the Worksheet"
+        With Worksheets(Counter)
+            .Range("A1").Value = "Back to " & ActiveSheet.Name
+            .Hyperlinks.Add Sheets(x.Name).Range("A1"), "", _
+            "'" & ActiveSheet.Name & "'" & "!" & ActiveCell.Address, _
+            ScreenTip:="Return to " & ActiveSheet.Name
+        End With
+    End With
+ActiveCell.Offset(1, 0).Select
+Donothing:
+Next x
+End Sub
