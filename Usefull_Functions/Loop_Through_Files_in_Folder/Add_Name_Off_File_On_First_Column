@@ -31,7 +31,7 @@ Sub File_Loop_Example()
         Workbooks.Open FileName:=MyFolder & "\" & MyFile, UpdateLinks:=False
             Columns("A:A").Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove        
             Range("A1").Value = "Planilha"
-            [A2].Value = ActiveWorkbook.Name
+            Range("A2:A200").Value = ActiveWorkbook.Name
     0
         Workbooks(MyFile).Close SaveChanges:=True
         MyFile = Dir
