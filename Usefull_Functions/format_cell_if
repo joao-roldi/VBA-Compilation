@@ -1,4 +1,6 @@
-Sub Format_Cell_IF()
+' For values
+
+Sub format_cell_if_number()
 Dim rng As Range
 For Each rng In Selection
 
@@ -12,6 +14,24 @@ For Each rng In Selection
                 rng.Font.Bold = False
             End If
         End If
+    End If
+    
+Next rng
+End Sub
+
+
+' For Text
+
+Sub format_cell_if_text()
+Dim rng As Range
+For Each rng In Selection
+
+    If rng.Value <> "" Then
+            If rng.Text = "Não" Then
+                rng.Font.Color = vbRed
+                rng.Font.Bold = True
+
+            End If
     End If
     
 Next rng
