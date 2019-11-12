@@ -1,6 +1,6 @@
-Function REMOVER_ACENTO(Caract As String)
+Function remove_accents(Caract As String)
 
-'Função encontrada em: https://www.funcaoexcel.com.br/remover-acentos/
+'Function found in https://www.funcaoexcel.com.br/remover-acentos/
 
  Dim A As String
  Dim B As String
@@ -12,5 +12,5 @@ Function REMOVER_ACENTO(Caract As String)
  B = Mid(RegChars, i, 1)
  Caract = Replace(Caract, A, B)
  Next
- Acento = Caract
+ remove_accents = Caract
 End Function
