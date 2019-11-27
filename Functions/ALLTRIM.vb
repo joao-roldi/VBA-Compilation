@@ -1,4 +1,4 @@
-Function remove_accents(Caract As String)
+Function ALLTRIM(Caract As String)
 
 'Function found in https://www.funcaoexcel.com.br/remover-acentos/
 
@@ -11,6 +11,8 @@ Function remove_accents(Caract As String)
  A = Mid(AccChars, i, 1)
  B = Mid(RegChars, i, 1)
  Caract = Replace(Caract, A, B)
+ Caract = UCase(Caract)
+ Caract = Trim(Caract)
  Next
- remove_accents = Caract
+ ALLTRIM = Caract
 End Function
