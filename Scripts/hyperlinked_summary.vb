@@ -1,4 +1,4 @@
-## This code adds a Summary/Index Sheet to the workbook
+'This code adds a Summary/Index Sheet to the workbook
 
 Sub Index()
 
@@ -21,8 +21,8 @@ End Sub
 
 
 
-## The code bellow adds an hyperlink to go back to active sheet. 
-## Combined they can create an easy way to navigate on a big worksheet (Just be careful to not overwrite the index)
+'The code bellow adds an hyperlink to go back to active sheet. 
+'Combined they can create an easy way to navigate on a big worksheet (Just be careful to not overwrite the index)
 
 Sub CreateSummary()
 
