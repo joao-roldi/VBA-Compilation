@@ -1,4 +1,7 @@
 Sub PasswordBreaker()
+' I really don't know how this macro works, but it works
+' Found on: http://www.excelsupersite.com/how-to-unprotect-an-excel-spreadsheet-if-you-have-lost-your-password/
+
 Dim i As Integer, j As Integer, k As Integer
 Dim l As Integer, m As Integer, n As Integer
 Dim i1 As Integer, i2 As Integer, i3 As Integer
@@ -25,5 +28,3 @@ Next: Next: Next: Next: Next: Next
 Next: Next: Next: Next: Next: Next
 
 End Sub
-
-'found on: http://www.excelsupersite.com/how-to-unprotect-an-excel-spreadsheet-if-you-have-lost-your-password/
