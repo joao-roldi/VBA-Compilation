@@ -1,4 +1,6 @@
 Sub monhts_in_text_to_date()
+' The names of the months are in portuguese format, but the date format must be in american format (mm/dd/yyyy) in order to work
+
     Columns("C:C").Select
     Selection.Replace What:="jan", Replacement:="01/01/2019", LookAt:=xlPart , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, ReplaceFormat:=False
     Selection.Replace What:="fev", Replacement:="02/01/2019", LookAt:=xlPart , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, ReplaceFormat:=False

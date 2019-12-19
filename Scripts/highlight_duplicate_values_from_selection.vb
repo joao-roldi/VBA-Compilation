@@ -1,4 +1,5 @@
 Sub duplicate_values_from_selection()
+'This is useful when you have a lot of rows and the conditional format is impracticable
 
 Dim myRange As Range
 Dim i As Integer
