@@ -40,10 +40,8 @@ let
         {"Tipo de documento", type text}
     }), 
     
-    #"Linhas Filtradas" = Table.SelectRows(#"Tipo Alterado", each ([Tipo de documento] = "DB")), 
-   
+    #"Linhas Filtradas" = Table.SelectRows(#"Tipo Alterado", each ([Tipo de documento] = "DB")),  
     #"Coluna Tempo até Devolução Adicionada" = Table.AddColumn(#"Linhas Filtradas", "Tempo até devolução", each [Data de compensação] - [Data do documento]), 
-   
     #"Tipo Coluna Tempo até Devolução Alterado" = Table.TransformColumnTypes(#"Coluna Tempo até Devolução Adicionada",{{"Tempo até devolução", Int64.Type}}), 
    
     #"Colunas Reordenadas" = Table.ReorderColumns(#"Tipo Coluna Tempo até Devolução Alterado",
@@ -111,10 +109,11 @@ let
         "Bloqueio pgto.", 
         "Cód.Razão Especial", 
         "Texto descritivo"
-    })
+    }),
 
     #"Linhas Classificadas" = Table.Sort(#"Colunas Removidas",{{"Tempo até devolução", Order.Descending}}),
-    
     #"Linhas Filtradas1" = Table.SelectRows(#"Linhas Classificadas", each [Tempo até devolução] > 45)
+    #"Colunas Renomeadas" = Table.RenameColumns(#"Linhas Filtradas1",{{"Montante em moeda interna", "Montante"}})
+
 in
-    #"Colunas Removidas"
+    #"Colunas Renomeadas"
