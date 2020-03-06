@@ -7,6 +7,6 @@ Do while x < 10:
     Selection.Replace What:=Cstr(x), Replacement:=Cstr(x), LookAt:=xlPart, _
         SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
         ReplaceFormat:=False
-    x = x +1
+    x = x + 1
 Loop
 End Sub
