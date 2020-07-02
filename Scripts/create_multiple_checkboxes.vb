@@ -36,6 +36,9 @@ For Each c In chkBoxRange
     Set chkBox = chkBoxRange.Parent.CheckBoxes.Add(0, 1, 1, 0)
 
     With chkBox
+        'Adjust checkbox dimensions
+        .Height = 17
+        .Width = 17
 
         'Set the position of the checkbox based on the cell
         .Top = c.Top + c.Height / 2 - chkBox.Height / 2
