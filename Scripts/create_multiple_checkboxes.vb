@@ -1,5 +1,7 @@
 Sub CreateCheckBoxes()
 
+'Found on: https://exceloffthegrid.com/create-multiple-checkboxs-vba/
+
 'Declare variables
 Dim c As Range
 Dim chkBox As CheckBox
