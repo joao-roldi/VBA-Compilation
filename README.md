@@ -1,6 +1,6 @@
 # Excel VBA Compilation
-Even VBA making to the top dreaded language in the recent StackOverflow survey, it's ~sadly~ very useful to my job today. 
-
-I'm creating this repository with comands and small codes to future personal use (So I don't have to dig in 2011 blogs and questions to find something useful everytime). So this repository it's just a compilation of formulas with a little tinkery here and there.
-
-The codes inserted here will be simple and I will not put explanations on how to use then, they are simply for consulting purpouse.
+Even VBA making it to the top dreaded language in the recent StackOverflow survey, it's still very useful to my job today.
+ 
+I'm creating this repository with scripts and functions for future personal use (So I don't have to dig through 2008 obscure blogs and forum questions to find something useful everytime). The codes are simply for consulting purposes.
+ 
+Also, I'll try to make references for all the sites in the beginning of the code, so it will be better to find a more detailed explanation on how it works.
